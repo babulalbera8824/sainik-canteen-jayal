@@ -50,7 +50,7 @@ export default function HomePage(){
     let msg=`*सैनिक कैंटीन जायाल - नया Order*%0A%0A`
     cart.forEach(c=>{msg+=`${c.name_hi} x ${c.qty} = ₹${c.price*c.qty}%0A`})
     msg+=`%0A*Total: ₹${total}*%0AFree Delivery in Jayal%0A%0AAddress:`
-    window.open(`https://wa.me/918824612158?text=${msg}`,'_blank')
+    window.open(`https://wa.me/919549062946?text=${msg}`,'_blank')
   }
 
   return(
@@ -60,10 +60,10 @@ export default function HomePage(){
         <div className="max-w-6xl mx-auto flex items-center gap-3">
           <h1 className="font-black text-lg whitespace-nowrap">🛡️ सैनिक कैंटीन</h1>
           <div className="flex-1 relative">
-            <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Aata, Dal, Tel search..." className="w-full rounded-full pl-4 pr-10 py-2.5 text-black outline-none focus:ring-[...]"/>
+            <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Aata, Dal, Tel search..." className="w-full rounded-full pl-4 pr-10 py-2.5 text-black outline-none focus:ring[...]"
             <span className="absolute right-3 top-2.5">🔍</span>
           </div>
-          <button onClick={()=>setShowCart(true)} className="bg-[#D4AF37] text-black px-4 py-2.5 rounded-full font-bold relative">🛒{cart.length>0 && <span className="absolute -top-1 -right-1 bg-red[...]"}</button>
+          <button onClick={()=>setShowCart(true)} className="bg-[#D4AF37] text-black px-4 py-2.5 rounded-full font-bold relative">🛒{cart.length>0 && <span className="absolute -top-1 -right-1 bg[...")}
         </div>
       </header>
 
@@ -73,7 +73,7 @@ export default function HomePage(){
             <h2 className="text-3xl md:text-4xl font-black leading-tight">जयाल की अपनी<br/>दुकान</h2>
             <p className="opacity-80 mt-2">Fresh • Sasta • Tez Delivery • Home Delivery Available</p>
             <div className="flex gap-3 mt-5">
-              <button onClick={()=>document.getElementById('products')?.scrollIntoView({behavior:'smooth'})} className="bg-[#D4AF37] text-black px-6 py-3 rounded-full font-bold">Abhi Order Karo</button>
+              <button onClick={()=>document.getElementById('products')?.scrollIntoView({behavior:'smooth'})} className="bg-[#D4AF37] text-black px-6 py-3 rounded-full font-bold">Abhi Order Karo</butto[...]>
               <a href="/admin" className="bg-white/10 px-6 py-3 rounded-full font-bold">Admin</a>
             </div>
           </div>
@@ -125,7 +125,7 @@ export default function HomePage(){
                 </div>
               ))}
             </div>
-            {cart.length>0 && <><div className="mt-6 font-black">Total: ₹{total} {total>=500 && <span className="text-green-600 text-xs">+ Free Delivery</span>}</div><button onClick={orderWA} c[...]
+            {cart.length>0 && <><div className="mt-6 font-black">Total: ₹{total} {total>=500 && <span className="text-green-600 text-xs">+ Free Delivery</span>}</div><button onClick={orderWA} c[...) </div>
           </div>
         </div>
       )}
