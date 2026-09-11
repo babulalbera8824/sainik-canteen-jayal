@@ -55,15 +55,15 @@ export default function HomePage(){
 
   return(
     <main className="min-h-screen bg-[#FFF8E7] font-sans">
-      <div className="bg-[#0F3D2E] text-white text-center text-xs py-1.5">🚚 Jayal me 2 Ghante me Free Delivery | 📞 8824612158</div>
+      <div className="bg-[#0F3D2E] text-white text-center text-xs py-1.5">🚚 Jayal me 2 Ghante me Free Delivery | 📞 +919549062946</div>
       <header className="sticky top-0 z-40 bg-[#0F3D2E] text-white p-4 shadow-xl">
         <div className="max-w-6xl mx-auto flex items-center gap-3">
           <h1 className="font-black text-lg whitespace-nowrap">🛡️ सैनिक कैंटीन</h1>
           <div className="flex-1 relative">
-            <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Aata, Dal, Tel search..." className="w-full rounded-full pl-4 pr-10 py-2.5 text-black outline-none focus:ring-4 ring-[#D4AF37]/30"/>
+            <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Aata, Dal, Tel search..." className="w-full rounded-full pl-4 pr-10 py-2.5 text-black outline-none focus:ring-[...]"/>
             <span className="absolute right-3 top-2.5">🔍</span>
           </div>
-          <button onClick={()=>setShowCart(true)} className="bg-[#D4AF37] text-black px-4 py-2.5 rounded-full font-bold relative">🛒{cart.length>0 && <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-5 h-5 rounded-full grid place-items-center">{cart.reduce((s,c)=>s+c.qty,0)}</span>}</button>
+          <button onClick={()=>setShowCart(true)} className="bg-[#D4AF37] text-black px-4 py-2.5 rounded-full font-bold relative">🛒{cart.length>0 && <span className="absolute -top-1 -right-1 bg-red[...]"}</button>
         </div>
       </header>
 
@@ -85,7 +85,7 @@ export default function HomePage(){
 
         <div className="px-4 flex gap-2 overflow-x-auto pb-2">
           {CATS.map(c=>(
-            <button key={c.id} onClick={()=>setCat(c.id)} className={`px-5 py-2.5 rounded-full whitespace-nowrap font-bold flex items-center gap-2 transition-all ${cat===c.id?'bg-[#0F3D2E] text-white scale-105 shadow-lg':'bg-white shadow hover:scale-105'}`}>{c.icon} {c.name}</button>
+            <button key={c.id} onClick={()=>setCat(c.id)} className={`px-5 py-2.5 rounded-full whitespace-nowrap font-bold flex items-center gap-2 transition-all ${cat===c.id?'bg-[#0F3D2E] text-wh[...]`}
           ))}
         </div>
 
@@ -110,7 +110,7 @@ export default function HomePage(){
           <div><div className="text-2xl">🚚</div><p className="font-bold text-sm mt-1">Free Delivery</p><p className="text-xs opacity-60">₹500+ par free</p></div>
           <div><div className="text-2xl">🌿</div><p className="font-bold text-sm mt-1">Fresh Products</p><p className="text-xs opacity-60">Roz fresh stock</p></div>
           <div><div className="text-2xl">💰</div><p className="font-bold text-sm mt-1">Best Price</p><p className="text-xs opacity-60">Jayal me sabse sasta</p></div>
-          <div><div className="text-2xl">📞</div><p className="font-bold text-sm mt-1">24/7 Support</p><p className="text-xs opacity-60">8824612158</p></div>
+          <div><div className="text-2xl">📞</div><p className="font-bold text-sm mt-1">24/7 Support</p><p className="text-xs opacity-60">+919549062946</p></div>
         </div>
       </div>
 
@@ -125,11 +125,11 @@ export default function HomePage(){
                 </div>
               ))}
             </div>
-            {cart.length>0 && <><div className="mt-6 font-black">Total: ₹{total} {total>=500 && <span className="text-green-600 text-xs">+ Free Delivery</span>}</div><button onClick={orderWA} className="w-full mt-4 bg-[#22C55E] text-white py-3 rounded-full font-bold">WhatsApp par Order</button></>}
+            {cart.length>0 && <><div className="mt-6 font-black">Total: ₹{total} {total>=500 && <span className="text-green-600 text-xs">+ Free Delivery</span>}</div><button onClick={orderWA} c[...]
           </div>
         </div>
       )}
-      <footer className="bg-[#0F1E18] text-white/70 p-8 text-center text-sm mt-8">📍 Jayal, Nagaur, Rajasthan 341023 • 📞 8824612158 • 🕘 7AM-9PM Daily</footer>
+      <footer className="bg-[#0F1E18] text-white/70 p-8 text-center text-sm mt-8">📍 Jayal, Nagaur, Rajasthan 341023 • 📞 +919549062946 • 🕘 7AM-9PM Daily</footer>
     </main>
   )
 }
