@@ -1,5 +1,18 @@
-module.exports = {
-  content: ["./app/**/*.{js,ts,jsx,tsx}"],
-  theme: { extend: { colors: { primary: "#0F3D2E", gold: "#D4AF37" } } },
-  plugins: []
-}
+import type { Config } from "tailwindcss";
+const config: Config = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: { DEFAULT: "#0FB46C", dark: "#0A8A52" },
+        qkblack: "#111111",
+      },
+    },
+  },
+  plugins: [],
+};
+export default config;
